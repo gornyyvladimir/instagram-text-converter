@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { convertText } from '../helpers';
+import convertText from '../helpers';
 import Notification from '../components/Notification';
-import SEO from "../components/seo"
+import SEO from '../components/Seo';
 import 'normalize.css';
 import './styles.css';
 
@@ -25,8 +25,8 @@ function App() {
 
   const handleCovert = event => {
     event.preventDefault();
-    const convertedText = convertText(text);
-    setConvertedText(convertedText);
+    const newConvertedText = convertText(text);
+    setConvertedText(newConvertedText);
     setDisabled(false);
   };
 
@@ -43,7 +43,11 @@ function App() {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="Как сделать абзац в инстаграм?"
+        description="Не знаете как сделать абзац в инстаграм? Этот онлайн инструмент обязательно вам поможет."
+        author="gornyyvladimir"
+      />
       <Notification show={notificationState}>
         Текст скопирован! Вставьте его в Instagram.
       </Notification>
@@ -93,9 +97,13 @@ function App() {
           </form>
         </div>
         <p className="text text--margin-bottom-2">
-          Количество символов: <b>{text.length}</b>
+          Количество символов: 
+          {' '}
+          <b>{text.length}</b>
           <br />
-          Максимальное количество символов в посте Instagram: <b>2200</b>
+          Максимальное количество символов в посте Instagram: 
+          {' '}
+          <b>2200</b>
         </p>
       </div>
     </>

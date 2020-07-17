@@ -1,4 +1,4 @@
-import { convertText } from './helpers';
+import convertText from '.';
 
 test('convertText work correctly with \\n\\n characters', () => {
   const initialText =

@@ -6,12 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "/gatsby-instagram-text-converter",
-  siteMetadata: {
-    title: `Как сделать абзац в инстаграм?`,
-    description: `Не знаете как сделать абзац в инстаграм? Этот онлайн инструмент обязательно вам поможет.`,
-    author: `gornyyvladimir`,
-  },
+  pathPrefix: '/gatsby-instagram-text-converter',
   plugins: [
     {
       resolve: 'gatsby-plugin-react-svg',
