@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { YMInitializer } from 'react-yandex-metrika';
 import convertText from '../helpers';
 import Notification from '../components/Notification';
 import SEO from '../components/Seo';
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div>
+      <YMInitializer accounts={[54322950]} />
       <SEO
         title="Как сделать абзац в инстаграм?"
         description="Не знаете как сделать абзац в инстаграм? Этот онлайн инструмент обязательно вам поможет."
