@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div>
-      <YMInitializer accounts={[54322950]} />
+      <YMInitializer accounts={[54322950]} options={{webvisor: true}} version="2" />
       <SEO
         title="Как сделать абзац в инстаграм?"
         description="Не знаете как сделать абзац в инстаграм? Этот онлайн инструмент обязательно вам поможет."
