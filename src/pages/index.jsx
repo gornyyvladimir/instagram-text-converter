@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <SEO
         title="Как сделать абзац в инстаграм?"
         description="Не знаете как сделать абзац в инстаграм? Этот онлайн инструмент обязательно вам поможет."
@@ -51,7 +51,7 @@ function App() {
       <Notification show={notificationState}>
         Текст скопирован! Вставьте его в Instagram.
       </Notification>
-      <div className="container">
+      <div>
         <h1 className="title">Как сделать абзац в инстаграм?</h1>
         <p className="text">
           Этот инструмент поможет вам добавить специальный пробел в инстаграм,
@@ -97,16 +97,12 @@ function App() {
           </form>
         </div>
         <p className="text text--margin-bottom-2">
-          Количество символов: 
-          {' '}
-          <b>{text.length}</b>
+          Количество символов: <b>{text.length}</b>
           <br />
-          Максимальное количество символов в посте Instagram: 
-          {' '}
-          <b>2200</b>
+          Максимальное количество символов в посте Instagram: <b>2200</b>
         </p>
       </div>
-    </>
+    </div>
   );
 }
 
