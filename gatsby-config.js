@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: '/gatsby-instagram-text-converter',
+  pathPrefix: '/instagram-text-converter',
   plugins: [
     {
       resolve: 'gatsby-plugin-react-svg',
