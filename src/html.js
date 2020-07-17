@@ -15,7 +15,7 @@ export default function HTML(props) {
         {props.headComponents}
         {/* VK */}
         <script
-          defer
+          async
           type="text/javascript"
           src="https://vk.com/js/api/openapi.js?168"
         />
