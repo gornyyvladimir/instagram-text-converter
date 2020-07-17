@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7550e928876629ae7f59.js"
+    "url": "webpack-runtime-a62d057e76a1cd7b4bfd.js"
   },
   {
-    "url": "framework-0f7f24c8879fa60fb4d3.js"
+    "url": "framework-c7016826f351687bdf55.js"
   },
   {
-    "url": "app-29dc9a4b316c8f5cb69d.js"
+    "url": "app-4228e56aa82e2da156b7.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "fe815caaa9ef441598c179da6f209ab5"
+    "revision": "befbacd91fefb03bf11a0182b07c0073"
   },
   {
     "url": "google-fonts/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "408194b5eefdbbac37c3bbc32ba05e32"
+    "revision": "5d9640d0539dafbb5f2ed97913c78961"
   },
   {
     "url": "manifest.webmanifest",
@@ -149,7 +149,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/gatsby-instagram-text-converter/app-29dc9a4b316c8f5cb69d.js`))) {
+  if (!resources || !(await caches.match(`/gatsby-instagram-text-converter/app-4228e56aa82e2da156b7.js`))) {
     return await fetch(event.request)
   }
 
