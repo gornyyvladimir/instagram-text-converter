@@ -15,10 +15,12 @@ export default function HTML(props) {
         {props.headComponents}
         {/* VK */}
         <script
+          defer
           type="text/javascript"
           src="https://vk.com/js/api/openapi.js?168"
         />
         <script
+          defer
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `VK.init({apiId: 7059586, onlyWidgets: true});`,
@@ -56,6 +58,7 @@ export default function HTML(props) {
         {/* VK */}
         <div id="vk_comments" />
         <script
+          defer
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});`,
