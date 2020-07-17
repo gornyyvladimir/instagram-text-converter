@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-a62d057e76a1cd7b4bfd.js"
+    "url": "webpack-runtime-229fecf9e0c71682bba2.js"
   },
   {
     "url": "framework-c7016826f351687bdf55.js"
   },
   {
-    "url": "app-4228e56aa82e2da156b7.js"
+    "url": "app-8433a64497de2e6f3d20.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "befbacd91fefb03bf11a0182b07c0073"
+    "revision": "2180669cde147cb0f701d1da6a197155"
   },
   {
     "url": "google-fonts/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2",
@@ -52,11 +52,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "5d9640d0539dafbb5f2ed97913c78961"
+    "revision": "9e5ba7ffb89129da512b3b1239b6fae5"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "d75b1867994c24f4e084b1848d8ee5f8"
+    "revision": "8188130a2e6b25d0011d8c303d7c3070"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -144,12 +144,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/gatsby-instagram-text-converter`), ``)
+  pathname = pathname.replace(new RegExp(`^/instagram-text-converter`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/gatsby-instagram-text-converter/app-4228e56aa82e2da156b7.js`))) {
+  if (!resources || !(await caches.match(`/instagram-text-converter/app-8433a64497de2e6f3d20.js`))) {
     return await fetch(event.request)
   }
 
@@ -162,7 +162,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/gatsby-instagram-text-converter/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/instagram-text-converter/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
