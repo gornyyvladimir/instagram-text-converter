@@ -3,6 +3,7 @@ import { YMInitializer } from 'react-yandex-metrika';
 import convertText from '../helpers';
 import Notification from '../components/Notification';
 import SEO from '../components/Seo';
+import Comments from '../components/Comments';
 import 'normalize.css';
 import './styles.css';
 
@@ -103,6 +104,7 @@ function App() {
           <br />
           Максимальное количество символов в посте Instagram: <b>2200</b>
         </p>
+        <Comments />
       </div>
     </div>
   );
