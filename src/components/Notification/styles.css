@@ -24,3 +24,21 @@
   opacity: 0;
   pointer-events: none;
 }
+
+.notification-enter {
+  opacity: 0.01;
+}
+
+.notification-enter.notification-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.notification-leave {
+  opacity: 1;
+}
+
+.notification-leave.notification-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms;
+}
